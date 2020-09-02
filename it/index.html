@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Select language</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha512-k78e1fbYs09TQTqG79SpJdV4yXq8dX6ocfP0bzQHReQSbEghnS6AQHE2BbZKns962YaqgQL16l7PkiiAHZYvXQ==" crossorigin="anonymous" />
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	    <div class="row">
+		    <div class="col-md-1">
+		    </div>
+		    <div class="col-md-10">
+		        <div class="text-center">
+		        <a href="#">
+    			    <img class="img-fluid" alt="Select language" src="lang.png">
+    			</a>
+			    </div>
+		    </div>
+		    <div class="col-md-1">
+		    </div>
+	    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha512-ANkGm5vSmtDaoFA/NB1nVJzOKOiI4a/9GipFtkpMG8Rg2Bz8R1GFf5kfL0+z0lcv2X/KZRugwrAlVTAgmxgvIg==" crossorigin="anonymous"></script>
+
+   <script>
+        var links, i, le;
+        var urlParams = new URLSearchParams(window.location.search);
+        let token = urlParams.get("utm_campaign");
+        links = document.getElementsByTagName('a');
+        for (i = 0, le = links.length; i < le; i++) {
+            if(token!=null) {
+                links[i].href = "https://it.vegaslim.site/"+token+ '?' + urlParams.toString();
+            } else {
+                links[i].href = "https://it.vegaslim.site/";
+            }
+        }
+    </script>
+
+  </body>
+</html>
